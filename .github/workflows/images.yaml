@@ -189,4 +189,4 @@ jobs:
       - name: build-image
         run: |
           export TAG=$(cat images/nginx/TAG)
-          cd images/nginx/rootfs && docker buildx build --platform=${{ env.PLATFORMS }} --push -t ingressnginx/nginx:${TAG} .
+          cd images/nginx/rootfs && docker buildx build --platform=${{ env.PLATFORMS }} --push -t jfcoz/kubernetes-ingress-nginx:${TAG} .
